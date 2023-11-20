@@ -1,11 +1,11 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from locators import text_fields, item_buttons, navigation_buttons, labels
 from csv import reader
-from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 driver.implicitly_wait(10)
 
 driver.get("http://saucedemo.com/")
