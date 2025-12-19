@@ -21,10 +21,14 @@ navigation_buttons = {
     "Login": (By.ID, "login-button"),
     "Cart": (By.CLASS_NAME, "shopping_cart_link"),
     "Checkout": (By.ID, "checkout"),
-    "Continue": (By.ID, "continue")
+    "Continue": (By.ID, "continue"),
+    "Finish": (By.ID, "finish"),
+    "Back Home": (By.ID, "back-to-products"),
 }
 
 labels = {
     "Error Message": (By.CSS_SELECTOR, "#login_button_container > div > form > div.error-message-container.error > h3"),
-    "Price Label": (By.CSS_SELECTOR, "#checkout_summary_container > div > div.summary_info > div.summary_info_label.summary_total_label")
+    "Price Label": (By.CLASS_NAME, "summary_total_label"),
+    "Checkout Error": (By.CSS_SELECTOR, "#checkout_info_container > div > form > div.checkout_info > div.error-message-container.error > h3")
 }
+
